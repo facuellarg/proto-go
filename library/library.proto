@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package library;
+
+option go_package = "./";
+
+
+message BookRequest{
+    string title = 1 ;
+    string isbn = 2;
+}
+
+message BookResponse{
+    BookRequest book = 1;
+    bool exists = 2;
+}
+
+
+service BookService{
+    rpc CheckBooks(stream BookRequest) returns (stream BookResponse) {}
+}
