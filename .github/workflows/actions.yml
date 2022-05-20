@@ -5,6 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: arduino/setup-protoc@v1
+        with:
+          version: '3.x'
       - name: Installing protoc-gen-go
         run: |
           go get github.com/golang/protobuf/protoc-gen-go
