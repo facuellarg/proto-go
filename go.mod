@@ -1,4 +1,4 @@
-module github.com/facuellarg/proto/library
+module github.com/facuellarg/proto-go
 
 go 1.18
 
